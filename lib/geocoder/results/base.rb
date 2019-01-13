@@ -75,6 +75,10 @@ module Geocoder
         fail
       end
 
+      def subpremise
+        nil
+      end
+
       def state_to_code(state_name)
         {
           'alabama' => 'AL',
