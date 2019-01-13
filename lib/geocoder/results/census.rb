@@ -7,8 +7,16 @@ module Geocoder::Result
       [@data.dig('coordinates', 'y').to_f, @data.dig('coordinates', 'x').to_f]
     end
 
+    def formatted_address
+      address
+    end
+
     def address(format = :full)
       @data['matchedAddress'].gsub(/#{city}/i, city).gsub(/\, \d{5}$/, " #{postal_code}, #{country_code}")
+    end
+
+    def subpremise
+      nil
     end
 
 
