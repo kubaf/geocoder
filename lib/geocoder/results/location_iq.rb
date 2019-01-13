@@ -8,5 +8,9 @@ module Geocoder::Result
         street
       ].compact.join(" ")
     end
+
+    def state_code
+      state_to_code(state)
+    end
   end
 end
