@@ -150,6 +150,12 @@ module Geocoder
           'virgin islands' => 'VI'
         }[state_name&.downcase]||state_name
       end
+
+      def standardized_country_code(country_code)
+        {
+          'us' => 'USA'
+        }[country_code&.downcase]||country_code
+      end
     end
   end
 end
