@@ -28,6 +28,10 @@ module Geocoder::Result
       @data.dig('addressComponents', 'state')
     end
 
+    def state_code
+      state
+    end
+
 
     def country
       'United States'
